@@ -2,3 +2,4 @@
 venv/
 booktime/__pycache__/
 *.pyc
+*.pyc
