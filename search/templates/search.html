@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Search form -->
+<div class="row d-flex justify-content-center">   
+    <div class="md-form col-md-10">
+      <div class="input-group md-3">
+        <input type="text" class="form-control" placeholder="Search">
+
+        <!-- Language Select -->
+        <div class="input-group-append md-3">
+          <select class="btn btn-outline-primary input-sm">
+            <option>Lang</option>
+            <option>English</option>
+            <option>French</option>
+            <option>German</option>
+          </select>
+        </div>
+        <!-- Extension Select -->
+        <div class="input-group-append md-3">
+            <select  class="btn btn-outline-primary input-sm">
+                <option>Ext</option>
+                <option>PDF</option>
+                <option>EPUB</option>
+                <option>DJVU</option>
+              </select>
+        </div>
+
+            <div class="btn btn-primary" type='button'>Search</div>
+
+      </div>
+    </div>
+</div> 
+{% endblock content %}
