@@ -3,3 +3,4 @@ venv/
 booktime/__pycache__/
 *.pyc
 *.pyc
+db.sqlite3
