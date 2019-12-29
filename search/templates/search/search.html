@@ -5,12 +5,10 @@
     <div class="md-form col-md-10">
       <div class="input-group md-3">
         <form class="search input-group md-3" action="{% url 'search' %}" method="GET" >
-            {% csrf_token %}
             <input type="text" placeholder="Search" class="form-control" name="user_query" value=" {{ query }} ">
             <input class="btn btn-primary" type="submit" value="Search">
         </form>
         </div>
-
     </div>
 </div> 
 {% endblock content %}
