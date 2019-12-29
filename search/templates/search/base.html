@@ -24,8 +24,7 @@
               <a class="nav-item nav-link" href="{% url 'search' %}">Home</a>
               <a class="nav-item nav-link" href="{% url 'search-about' %}">About</a>
             </div>
-            <!-- {% comment %}
-            Navbar Right Side 
+            <!–– Navbar Right Side -->
             <div class="navbar-nav">
                 {% if user.is_authenticated %}
                     <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
@@ -35,7 +34,6 @@
                     <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
                 {% endif %}
             </div>
-            {% endcomment %}-->
           </div>
         </div>
       </nav>
