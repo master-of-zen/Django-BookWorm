@@ -13,8 +13,8 @@ from requests import get
 from bs4 import BeautifulSoup
 
 # Own modules
-from async_stuff import scrap_web_pages
-from timeit import timeit
+from BookSearch.async_stuff import scrap_web_pages
+from BookSearch.timeit import timeit
 
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(message)s',
@@ -111,8 +111,8 @@ def sort_books(all_books, book) -> list:
     return all_books
 
 
-def search(book) -> list:
-    get_
+def search(book_request) -> list:
+    book = get_attributes(book_request)
     # Given tuple with book info, search for book on libgen and return all books that relevant
     try:
         # Scrap libgen search page for books data
