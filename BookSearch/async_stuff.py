@@ -29,7 +29,6 @@ async def run(urls):
         return responses
 
 
-@timeit
 def scrap_web_pages(urls):
     loop = asyncio.get_event_loop()
     future = asyncio.ensure_future(run(urls))
