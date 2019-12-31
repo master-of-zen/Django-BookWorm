@@ -2,3 +2,6 @@ django
 django-crispy-forms
 django-bootstrap4
 django-admin
+beautifulsoup4
+aiohttp
+lxml
