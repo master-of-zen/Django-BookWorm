@@ -1,6 +1,5 @@
 import asyncio
 from aiohttp import ClientSession
-from timeit import timeit
 
 
 async def fetch(url, session):
