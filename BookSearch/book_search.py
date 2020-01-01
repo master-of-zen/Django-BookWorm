@@ -1,18 +1,10 @@
 """
 Processing request, returning books info
 """
-# Standard libraries
 import logging
 import string
-from io import BytesIO
-from urllib import request
 from urllib.parse import urlencode
-
-# Imported modules
-from requests import get
 from bs4 import BeautifulSoup
-
-# Own modules
 from BookSearch.async_stuff import scrap_web_pages
 
 # Enable logging
