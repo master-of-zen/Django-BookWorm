@@ -30,9 +30,8 @@ async def run(urls):
 
 
 def scrap_web_pages(urls):
-    print('we here')
-    loop = asyncio.get_event_loop()
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
     future = asyncio.ensure_future(run(urls))
-    print('and here')
     result = loop.run_until_complete(future)
     return result
