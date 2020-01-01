@@ -12,7 +12,7 @@ async def run(urls):
     # Delay to make sure we don`t have all connections at the same time
     delay = 0.15
     tasks = []
-    # Create client session that will ensure we dont open new connection per each request.
+    # Create client session that will ensure we don't open new connection per each request.
     async with ClientSession() as session:
         # Pass first get
         task = asyncio.ensure_future(fetch(urls[0], session))
@@ -30,6 +30,9 @@ async def run(urls):
 
 
 def scrap_web_pages(urls):
+    print('we here')
     loop = asyncio.get_event_loop()
     future = asyncio.ensure_future(run(urls))
-    return loop.run_until_complete(future)
+    print('and here')
+    result = loop.run_until_complete(future)
+    return result

@@ -1,7 +1,6 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView, FormView
-from django.http import HttpResponse
-from BookSearch.book_search import search as book_search
+from django.views.generic import TemplateView
+from search_engine.book_search import search as book_search
 
 
 class search(TemplateView):
@@ -12,7 +11,8 @@ class search(TemplateView):
         if request.GET.get('q'):
             req = request.GET.get('q')
             print(req)
-            search_book = book_search(req)
+            print(type(req))
+            search_book = book_search(str(req))
             print(search_book)
             return render(request, 'search/search.html')
         else:

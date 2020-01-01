@@ -5,7 +5,7 @@ import logging
 import string
 from urllib.parse import urlencode
 from bs4 import BeautifulSoup
-from BookSearch.async_stuff import scrap_web_pages
+from search_engine.async_stuff import scrap_web_pages
 
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(message)s',
