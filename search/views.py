@@ -1,20 +1,23 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
 from search_engine.book_search import search as book_search
+from django.template.defaulttags import register
 
 
-class search(TemplateView):
+@register.filter
+def get_item(dictionary, key):
+    return dictionary.get(key)
+
+
+class search(ListView):
 
     template_name = 'search/search.html'
 
     def get(self, request, *args, **kwargs):
         if request.GET.get('q'):
             req = request.GET.get('q')
-            print(req)
-            print(type(req))
             search_book = book_search(str(req))
-            print(search_book)
-            return render(request, 'search/search.html')
+            return render(request, 'search/search.html', {'books': search_book})
         else:
             print('else')
             return render(request, 'search/search.html')
@@ -22,3 +25,4 @@ class search(TemplateView):
 
 class about(TemplateView):
     template_name = 'search/about.html'
+
