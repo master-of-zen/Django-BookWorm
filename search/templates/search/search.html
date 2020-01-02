@@ -8,6 +8,11 @@
             <input type="text" placeholder="Search" class="form-control" name="q" value=" {{ query }} ">
             <input class="btn btn-primary" type="submit" value="Search">
         </form>
+        {%  for book in books %}
+        <article class="media content-section">
+            {{ book }}
+        </article>
+        {% endfor %}
         </div>
     </div>
 </div> 
