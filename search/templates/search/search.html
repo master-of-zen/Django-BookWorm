@@ -2,18 +2,22 @@
 {% block content %}
 <!-- Search form -->
 <div class="row d-flex justify-content-center">   
-    <div class="md-form col-md-10">
-      <div class="input-group md-3">
+    <div class="md-form col-md-8">
         <form class="search input-group md-3" action="{% url 'search' %}" method="GET" >
             <input type="text" placeholder="Search" class="form-control" name="q" value=" {{ query }} ">
-            <input class="btn btn-primary" type="submit" value="Search">
+            <input class="btn btn-inline" type="submit" value="Search">
         </form>
+        <div class="mt-3">
         {%  for book in books %}
         <article class="media content-section">
-            {{ book }}
+            {{ book.title }}
+            {{ book.author }}
+            {{ book.ext }}
+            {{ book.size }}
+            <a href="{{ book.link }}" class="btn btn-link btn-sm" role="button" aria-disabled="true">Download</a>            
         </article>
         {% endfor %}
-        </div>
+    </div>
     </div>
 </div> 
 {% endblock content %}
