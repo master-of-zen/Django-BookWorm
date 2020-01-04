@@ -8,9 +8,9 @@
             <input class="btn btn-inline" type="submit" value="Search">
         </form>
         {%  for book in books %}
-        <div class="d-flex justify-content-end mt-2">
-            <div class=" p-2 bd-highlight flex-fill">{{ book.author }} - {{ book.title }} </div>
-            <div class="p-2 bd-highlight">{{ book.ext }} {{ book.size }}</div>
+        <div class="d-flex mt-2">
+            <div class=" p-2 mr-auto result">{{ book.author }} - {{ book.title }} </div>
+            <div class="p-2 result">{{ book.ext }} {{ book.size }}</div>
             <a href="{{ book.link }}" class="p-2 btn btn-primary btn-sm" role="button" aria-disabled="true">Download</a>            
         </div>
         {% endfor %}
