@@ -27,6 +27,10 @@ ul {
 .site-header .navbar-nav .nav-link.active {
   font-weight: 500;
 }
+.result {
+  background: #ffffff;
+  border-radius: 3px;
+}
 
 .content-section {
   background: #ffffff;
