@@ -3,14 +3,18 @@
 <!-- Search form -->
 <div class="row d-flex justify-content-center">   
     <div class="md-form col-md-8">
-        <form class="search input-group md-3" action="{% url 'search' %}" method="GET" >
-            <input type="text" placeholder="Search" class="form-control" name="q" value=" {{ query }} ">
+        <form class="search input-group md-3" action="{% url 'search' %}" method="GET">
+            {% if q %}
+            <input type="text" class="form-control" name="q" value="{{ query }}" placeholder="{{ q }}">
+            {% else %}
+            <input type="text"  class="form-control" name="q" value="{{ query }}" placeholder="Type Search Here">
+            {% endif %}
             <input class="btn btn-inline" type="submit" value="Search">
         </form>
         {%  for book in books %}
-        <div class="d-flex mt-2">
-            <div class=" p-2 mr-auto result">{{ book.author }} - {{ book.title }} </div>
-            <div class="p-2 result">{{ book.ext }} {{ book.size }}</div>
+        <div class="d-flex mt-3  result ">
+            <div class=" p-2 mr-auto result ">{{ book.author }} - {{ book.title }} </div>
+            <div class="p-2 result ">{{ book.lang }} {{ book.ext }} {{ book.size }}</div>
             <a href="{{ book.link }}" class="p-2 btn btn-primary btn-sm" role="button" aria-disabled="true">Download</a>            
         </div>
         {% endfor %}
