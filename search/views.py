@@ -17,7 +17,7 @@ class search(ListView):
         if request.GET.get('q'):
             req = request.GET.get('q')
             search_book = book_search(str(req))
-            return render(request, 'search/search.html', {'books': search_book})
+            return render(request, 'search/search.html', {'books': search_book, 'q': req})
         else:
             print('else')
             return render(request, 'search/search.html')
