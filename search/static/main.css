@@ -8,11 +8,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #444444;
 }
 
-ul {
-  white-space: nowrap; 
-  overflow: scroll;
-}
-
 .bg-steel {
   background-color: #5f788a;
 }
@@ -32,32 +27,7 @@ ul {
   background-color: #ffffff;
   background: #ffffff;
   border-radius: 5px;
-  white-space: nowrap; 
-  overflow: scroll;
-}
-
-.article-metadata {
-  padding-bottom: 1px;
-  margin-bottom: 4px;
-  border-bottom: 1px solid #e3e3e3
-}
-
-.article-metadata a:hover {
-  color: #333;
-  text-decoration: none;
-}
-
-.article-svg {
-  width: 25px;
-  height: 25px;
-  vertical-align: middle;
-}
-
-.account-img {
-  height: 125px;
-  width: 125px;
-  margin-right: 20px;
-  margin-bottom: 16px;
+  overflow: hidden;
 }
 
 .account-heading {
