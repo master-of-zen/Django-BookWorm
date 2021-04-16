@@ -11,18 +11,19 @@ def get_item(dictionary, key):
 
 class search(ListView):
 
-    template_name = 'search/search.html'
+    template_name = "search/search.html"
 
     def get(self, request, *args, **kwargs):
-        if request.GET.get('q'):
-            req = request.GET.get('q')
+        if request.GET.get("q"):
+            req = request.GET.get("q")
             search_book = book_search(str(req))
-            return render(request, 'search/search.html', {'books': search_book, 'q': req})
+            return render(
+                request, "search/search.html", {"books": search_book, "q": req}
+            )
         else:
-            print('else')
-            return render(request, 'search/search.html')
+            print("else")
+            return render(request, "search/search.html")
 
 
 class about(TemplateView):
-    template_name = 'search/about.html'
-
+    template_name = "search/about.html"
